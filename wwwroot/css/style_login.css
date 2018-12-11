@@ -1,0 +1,57 @@
+.fundo{
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    width: 98%;
+    height: 90%;
+    background: #1D6672;
+    /*display: flex; Pode ser usado para deixar o logo ao lado do texto*/
+    padding: 1% 1%;
+    color: #fff;
+    
+}/*Serve para vÃ¡rias pÃ¡ginas*/
+
+.posicionar_logo *{
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+} /*Nesse caso, só funciona se usar o asterisco*/
+
+.formulario_login *{
+    display: block;
+    margin-bottom: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;    
+}
+
+.btn:active{
+    box-shadow: 0em 0.3em 0.3em #333;
+} /*Serve para o botÃ£o ACESSAR SISTEMA.*/
+
+.bg-red{
+    background-color: red;
+    color: white;
+    padding: 0em 1em;
+    border-radius: 4px; /*Arredonda a borda*/
+    border: none;
+} /* Pinta o botÃ£o de vermelho e deixa as letras em branco. Serve para o botÃ£o ACESSAR SISTEMA.*/
+
+.bg-white{
+    background-color:white;
+    color: black;
+    padding: 0em 1em;
+    border-radius: 4px; /*Arredonda a borda*/
+    border: none;
+} 
+
+.texto_pagina_login{
+    max-width: 20vw; /*Limita o tamanho máximo da largura do espaço do texto.*/
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding: 1em 1em;
+}

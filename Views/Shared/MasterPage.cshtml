@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Sem isso, não tem responsividade-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style_master_page.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <!--O link acima é para puxar coisas do fontawesome-->
+    <title>CARFEL - CHECKPOINT</title>
+</head>
+
+<body>
+    <header class="top-bar">
+        <img width="162px" height="190px" src='/imagens/logo_checkpoint.png' />
+        
+        <div class="texto_header">
+            <p>Telefone: (11) 99999-9999<br><br>
+                Endereço: Rua Barão de Limeira, 428 - Santa Cecília - 
+                São Paulo - SP </p>
+        </div>
+
+        <div class="perfis">
+            <a href="#">
+                <img width="40px" height="40px" src='/imagens/icone_facebook.jpg' />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">
+                <img width="40px" height="40px" src='/imagens/icone_youtube.png' />
+            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">
+                <img width="40px" height="40px" src='/imagens/icone_whatsapp.jpeg' />
+            </a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">
+                 <img width="40px" height="40px" src='/imagens/icone_instagram.png' />
+            </a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#">
+                <img width="40px" height="40px" src='/imagens/icone_twitter.png' />
+            </a> 
+        </div>
+
+        <!-- <!DOCTYPE html>  TENTAR USAR O id (como abaixo) para colocar o botão na posição desejada
+<html>
+Tratar um click com html5: -->
+<!-- <head>
+<style type="text/css">
+    #centralizar{position:absolute top:50% left:50%}
+</style> 
+</head>
+<body>
+    <script>
+    function fuiClicado(){
+        document.write("Fui clicado");
+    }
+    </script>
+    <div id="centralizar">
+    <button name="cent" onClick="fuiClicado()"> Clique Aqui</button>
+    </div>
+</body>
+
+</html> -->
+
+        <div class="alinhar_botao">
+            <a class="bg-red btn" href="/Usuario/Login">Login</a>
+        </div>
+     
+
+    </header>  
+
+    <main>   
+        
+        <div class="maos_relogio">
+
+        </div>
+
+         @RenderBody()
+       
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="imagemrodape">
+            <img width="121,5px" height="142,5px" src='/imagens/logo_checkpoint.png' />
+        </div>
+       
+        <nav class="menurodape">
+            <ul> 
+                <li>
+                    <a href="/Usuario/Index">HOME</a>
+                </li> 
+                <li>
+                    <a href="/Usuario/Quem_somos">QUEM SOMOS</a>
+                </li>
+                <li>
+                    <a href="/Usuario/FAQ">FAQ</a>
+                </li>
+                <li>
+                    <a href="/Comentario/Envio_de_comentario">DEPOIMENTOS</a>
+                </li>
+                <li>
+                    <a href="/Usuario/Fale_conosco">FALE CONOSCO</a>
+                </li>
+                <li>
+                    <a href="/Usuario/Cadastro">CADASTRE-SE</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="alinhar_botao_footer">
+             <a class="bg-red btn" href="/Usuario/Login">Login</a>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

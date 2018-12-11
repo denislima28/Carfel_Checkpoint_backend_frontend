@@ -1,0 +1,91 @@
+@{
+    Layout="MasterPage";
+}
+
+<html>
+<head>
+     <link rel="stylesheet" href="/css/style_cadastro.css">
+</head>
+
+
+<body>
+    
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="/Usuario/Index">HOME</a>
+            </li>
+            <li>
+                <a href="/Usuario/Quem_somos">QUEM SOMOS</a>
+            </li>
+            <li>
+                <a href="/Usuario/FAQ">FAQ</a>
+            </li>
+            <li>
+                <a href="/Comentario/Envio_de_comentario">DEPOIMENTOS</a>
+            </li>
+            <li>
+                <a href="/Usuario/Fale_conosco">FALE CONOSCO</a>
+            </li>
+            <nav class="partemenudiferente">
+                <li>
+                    <a href="/Usuario/Cadastro">CADASTRE-SE</a>
+                </li>
+            </nav>
+        </ul>
+    </nav>
+
+    <!-- <div class="alinhamento"> -->
+        <article class="texto_cadastro">
+            <p>Para se cadastrar no site, preencha o formulário abaixo. Se o cadastro for
+                aprovado, você receberá uma mensagem em até 72 horas.
+                
+            </p><br>
+            
+        </article>        
+        
+    <!-- </div> -->
+    
+    
+    <div class="formulario">
+
+        @ViewBag.Mensagem
+
+        <form action="/Usuario/Cadastro" method="POST">
+            <label>
+                <input type="text" size="50" name="nome" required maxlength="50" placeholder="Digite seu nome">
+            </label>
+            
+            <label>
+                <input type="email" size="50" name="email" required maxlength="50" placeholder="Digite seu e-mail">
+            </label>
+
+            <label>
+                <input type="password" size="50" name="senha" required maxlength="30" required minlength="8" placeholder="Digite sua senha">
+            </label>
+
+            <!-- <label>
+                Confirme sua senha
+                <input type="password" name="senha" required maxlength="30" required minlength="8">
+            </label> Implementar isso depois-->
+
+            <label class> Você é administrador(a)?
+                <select name="administrador" required>
+                    <option value="false">Não</option> 
+                    <option value="true" selected>Sim</option>
+                </select>
+            </label>
+
+            
+            <button type="submit" class="bg-red btn">ENVIAR INFORMAÇÕES</button>
+
+            <a href="/Usuario/Listar">Listar</a>
+            <a href="/Usuario/Cadastro">Cadastro de usuário</a>
+            <a href="/Usuario/Login">Login</a>
+
+        </form>
+
+    </div>
+    </body>
+</html>
+

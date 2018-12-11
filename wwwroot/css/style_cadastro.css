@@ -1,0 +1,49 @@
+.texto_cadastro{
+    max-width: 90vw;
+    font-size: 2em;
+    text-align: justify;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+    padding: 0.5em 0.5em;
+}
+
+.formulario *
+{
+    display: block;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /*O texto "Você é Administrador?" não é um bloco. É por isso que o text-align foi usado. */
+}
+
+.btn:hover{
+    box-shadow: 0em 0.3em 0.3em #ccc;
+} /*Faz aparecer uma sombra atrás do botão quando o mouse está sobre ele*/
+
+/*Ocorre ao clicar no elemento*/
+.btn:active{
+    box-shadow: 0em 0.3em 0.3em #333;
+}
+
+.bg-red{
+    background-color: red;
+    color: white;
+    padding: 0em 1em;
+    border-radius: 4px; /*Arredonda a borda*/
+    border: none;
+} /* Pinta o botão de vermelho e deixa as letras em branco. Serve para o botão ACESSAR SISTEMA*/
+
+.bg-white{
+    background-color: white;
+    color: black;
+    padding: 0em 1em;
+    border-radius: 4px; /*Arredonda a borda*/
+    border: none;
+} /* Pinta o botão de vermelho e deixa as letras em branco. Serve para o botão ACESSAR SISTEMA*/
+
+
+/* Analogia com o Senai: O .formulario faz as ilhas da sala serem alinhadas. 
+O .formulario* faz as mesas das ilhas serem alinhadas. */

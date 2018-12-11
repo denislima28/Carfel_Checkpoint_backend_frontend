@@ -1,0 +1,44 @@
+@ViewBag.Mensagem
+
+
+<html>
+<head>
+     <link rel="stylesheet" href="/css/style_login.css">
+</head>
+
+<body>
+
+    <div class="fundo">
+        <div class="posicionar_logo">
+            <img width="162px" height="190px" src='/imagens/logo_checkpoint.png' />
+        </div>
+
+
+        <div class="formulario_login">
+            <form action="/Usuario/Login" method="POST">
+                
+                <label>
+                    <input type="email" size="50" name="email" required maxlength="80" placeholder="Digite seu e-mail"> 
+                </label>
+
+                <label>
+                    <input type="password" size="50" name="senha" required maxlength="50" placeholder="Digite sua senha">
+                </label>
+
+                <button class="bg-red btn" type="submit">ACESSAR SISTEMA</button> 
+
+            </form>
+
+            <div class="texto_pagina_login">
+
+                <p>Se ainda não tiver conta no site, <a href="/Usuario/Cadastro" style="color:black">CADASTRE-SE.</a></p> 
+     
+            </div>
+
+        </div>
+
+    </div>    
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+@using carfel_checkpoint.web.Models;
+
+@{
+    Layout="MasterPage";
+}
+
+<html>
+
+    <body>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/Usuario/Index">HOME</a>
+                </li>
+                <li>
+                    <a href="/Usuario/Quem_somos">QUEM SOMOS</a>
+                </li>
+                <li>
+                    <a href="/Usuario/FAQ">FAQ</a>
+                </li>
+                <nav class="partemenudiferente">
+                    <li>
+                        <a href="/Comentario/Envio_de_comentario">DEPOIMENTOS</a>
+                    </li>
+                </nav>
+                <li>
+                    <a href="/Usuario/Fale_conosco">FALE CONOSCO</a>
+                </li>
+                <li>
+                    <a href="/Usuario/Cadastro">CADASTRE-SE</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="formulario">
+
+        @ViewBag.Mensagem
+
+        SE VOCÊ TENTAR APERTAR QUALQUER BOTÃO AQUI SEM ESTAR LOGADO, O SISTEMA O LEVARÁ AUTOMATICAMENTE PARA A PÁGINA DE LOGIN.
+
+        <form action="/Comentario/Envio_de_comentario" method="POST">
+            <label>
+                <input type="text" size="50" name="TEXTO" required maxlength="20000" placeholder="Digite o texto">
+            </label>
+                       
+            <button type="submit" class="bg-red btn">ENVIAR COMENTÁRIO</button>
+
+        </form>
+
+        @*PARA ADMINISTRADORES*@
+
+        <a href="/Comentario/Listar_comentario">LISTAR COMENTÁRIOS(para usuários logados)</a>
+
+    </div>
+   
+
+ 
+  </body>
+
+</html>
+
+<h3>Comentários aprovados</h3>
+
+<table>
+    <thead>
+        <tr>
+            <td>Texto:</td>
+            <td>Data de postagem:</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(ComentarioModel comentario in ViewData["Comentario"] as List<ComentarioModel>)
+        {
+            
+            @if(@comentario.Status=="aprovado")
+            {
+                <tr>
+                    <td>
+                        @comentario.Texto
+                    </td>
+                    <td>
+                        @comentario.DataPostagem.ToShortDateString()
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+
+
+</table>
+

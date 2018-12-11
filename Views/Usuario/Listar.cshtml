@@ -1,0 +1,54 @@
+@using carfel_checkpoint.web.Models;
+
+@{
+    Layout="MasterPage";
+}
+
+<h3>Listagem de usuários</h3>
+
+@TempData["Mensagem"]
+
+<table>
+    <thead>
+        <tr>
+            <td>Nome:</td>
+            <td>E-mail:</td>
+            <td>Administrador:</td>
+        </tr>    
+    </thead>
+    <tbody>
+        @foreach(UsuarioModel usuario in ViewData["Usuario"] as List<UsuarioModel>)
+        {
+            <tr>
+                <td>
+                    @usuario.Nome
+                </td>
+                <td>
+                    @usuario.Email
+                </td>
+                <td>
+                    @usuario.Administrador
+                </td>
+                <td>
+                    <a href="/Usuario/Excluir?id=@usuario.ID">Excluir</a>
+                </td>
+            </tr>
+        }
+            <!-- O "as" serve para avisar o programa para entender o dado como lista. -->
+    </tbody>
+</table>
+
+
+@* Isso serve para comentários que contém o @ *@
+
+<!-- Pega os usuários da lista e o coloca numa lista de opções. -->
+<select>
+@foreach(UsuarioModel usuario in ViewData["Usuario"] as List<UsuarioModel>)
+{
+    <option>
+        @usuario.Nome
+    </option>
+
+}
+
+</select> 

@@ -1,0 +1,26 @@
+
+
+
+.duvidas{
+    box-shadow: 1px 1px 2px 2px black;
+    max-width: 90vw; /*Limita o tamanho máximo da largura do espaço do texto.*/
+    font-size: 1.2em;
+    text-align: justify;
+    margin-top: 3em;
+    margin-left: 3em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    padding: 1em 1em;
+}
+
+.texto_de_baixo{
+    max-width: 78vw; /*Limita o tamanho máximo da largura do espaço do texto.*/
+    font-size: 2em;
+    text-align: justify;
+    margin-top: 1em;
+    margin-left: 4em;
+    margin-right: 1em;
+    margin-bottom: 3em;
+    padding: 1em 1em;
+    text-align: center;
+}

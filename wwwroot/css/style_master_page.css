@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Impede que o padding faça o espaço se expandir.*/
+    font-family: Noto Serif KR;
+    text-decoration: none; /*Por algum motivo, esse comando só fez efeito sendo
+                                colocado aqui.*/
+}/*Serve para várias páginas*/
+
+.top-bar{
+    width: 100%;
+    height: auto;
+    background: #1D6672;
+    display: flex; /*Pode ser usado para deixar o logo ao lado do texto*/
+    padding: 1% 1%;
+    color: #fff;
+    justify-content: space-between;
+}/*Serve para várias páginas*/
+
+.texto_header{
+    font-size: 1.8em;
+    margin-left: 3%;
+    margin-top: 2%;
+}/*Serve para várias páginas*/
+
+.perfis{
+    display: inline-flex;
+}
+
+.btn:active{
+    box-shadow: 0em 0.3em 0.3em #333;
+} /*Serve para o botão de login.*/
+
+.bg-red{
+    background-color: red;
+    color: white;
+    padding: 0em 1em;
+    border-radius: 4px; /*Arredonda a borda*/
+    border: none;
+} /* Pinta o botão de vermelho e deixa as letras em branco. Serve para o botão de login.*/
+
+.maos_relogio{
+    background: url('../imagens/maos_relogio.png'); /*Estamos dentro da pasta css. O .. serve para sair da pasta css e entrar na pasta imagens*/
+    background-size: cover; /*Faz a imagem até caber no banner*/
+    background-position: center; /*Ajusta a posição da imagem.*/
+    height: 100vh;
+}/*Serve para várias páginas*/
+
+.alinhar_botao{
+    margin-top: 10%;
+    /* position: relative; top:50%; left:10%; usar algo assim para id*/
+    display: inline-flex; 
+}
+
+.menu{
+    background: #1DB9DD;
+}/*Serve para várias páginas*/
+
+.partemenudiferente{
+     /*background: #1D6672;  Tentar em branco para ver se fica legal.*/
+    background: white;
+}/*Serve para várias páginas*/
+
+.menu ul{
+    list-style-type: none;
+    height: 100%;
+    display: flex; /*Neste caso, deixa os itens da lista um do lado do outro*/
+}/*Serve para várias páginas*/
+
+.menu ul li{
+    /*flex: 1; Faz os itens da lista terem o mesmo espaçamento*/
+     /*background: #444; pode ser usado para visualizar resultados de comandos, não no código final */
+    text-align: center; /*Ver se realmente tem efeito*/
+    padding: 1em 1.895em;
+    margin-left: -0.093em;
+    margin-right: -0.093em;
+}/*Serve para várias páginas*/
+
+.menu ul a{
+    color: black; /*Cor das letras*/
+    text-decoration: none; /*Tira o azul e o sublinhado dos itens da lista*/
+    font-size: 1.8em;
+    padding: 0.5em 0.5em; /*Aumenta a área clicável*/
+    /*background: red;   Usado para verificar o espaço da área clicável*/
+}/*Serve para várias páginas*/
+
+.menu ul :hover{
+    background: #FF0000;
+} 
+/*O fundo sobre o qual a palavra está só fica dessa cor quando passa o mouse.*/
+/*Serve para várias páginas*/
+
+.menu ul a:hover{
+    color: white;
+} /*Serve para várias páginas*/
+
+.alinhamento{
+    display: inline-flex;
+} /*Coloca os textos e imagens na mesma linha. Serve para várias imagens e textos da página*/
+/*Serve para várias páginas*/
+
+.rodape{
+    background: #1D6672;
+    margin-top: 4em;
+    text-align: center;
+}
+
+.menurodape{
+    width: 100%;
+    height: auto;
+    padding: 1% 1%;
+    /*justify-content: space-between;*/
+    background: #1D6672;
+}/*Serve para várias páginas*/
+
+.menurodape ul{
+    list-style-type: none;
+    height: 100%;
+    display: flex; /*Neste caso, deixa os itens da lista um do lado do outro*/
+}/*Serve para várias páginas*/
+
+.menurodape ul li{
+    /*flex: 1; Faz os itens da lista terem o mesmo espaçamento*/
+     /*background: #444; pode ser usado para visualizar resultados de comandos, não no código final */
+    padding: 1em 1em;
+    margin-left: auto;
+    margin-right: auto;
+}/*Serve para várias páginas*/
+
+.menurodape ul a{
+    color: white; /*Cor das letras*/
+    text-decoration: none; /*Tira o azul e o sublinhado dos itens da lista*/
+    font-size: 1em;
+    padding: 0.5em 0.5em; /*Aumenta a área clicável*/
+    /*background: red;   Usado para verificar o espaço da área clicável*/
+}/*Serve para várias páginas*/
+
+.alinhar_botao_footer{
+    /* position: relative; top:50%; left:10%; usar algo assim para id*/
+    display: inline-flex;
+    font-size: 1em;
+    margin-bottom: 0.5%;
+    margin-left: 94%;
+}
+
+/* 
+************************************************************************
+************************************************************************
+************************************************************************
+************************************************************************
+***************************600px O media screen deve ser colocado por último
+para evitar conflito nas prioridades*/  
+
+/*OS MENUS DE CIMA E DE BAIXO - PARA VÁRIAS PÁGINAS*/
+
+@media screen and (max-width: 1080px){
+    .menu ul{
+        flex-direction: column; /*Os itens do menu ficarão em coluna*/
+    }
+
+    .alinhamento{
+        flex-direction: column; /*Os itens ficarão em coluna*/
+    } /*Não funciona se colocar o semtitulo*/
+
+    .menurodape ul{
+        font-size: 0.7em;
+       
+    }
+}
+

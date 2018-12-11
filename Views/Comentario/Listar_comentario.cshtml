@@ -1,0 +1,80 @@
+@using carfel_checkpoint.web.Models;
+
+<h3>Listagem de comentários</h3>
+
+@TempData["Mensagem"]
+
+<table>
+    <thead>
+        <tr>
+            <td>Texto:</td>
+            <td>Data de postagem:</td>
+            <td>Status: </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(ComentarioModel comentario in ViewData["Comentario"] as List<ComentarioModel>)
+        {
+            <tr>
+                <td>
+                    @comentario.Texto
+                </td>
+                <td>
+                    @comentario.DataPostagem.ToShortDateString()
+                </td>
+                <td>
+                    @comentario.Status
+                </td>
+                <td>    
+                    <a href="/Comentario/Reprovar_Excluir_comentario?idcomentario=@comentario.IDcomentario">Excluir</a>
+                    @*Está ligado ao parâmetro idcomentario, que aparece no método Reprovar_Excluir_comentario*@
+                    <a href="/Comentario/Aprovar_comentario?idcomentario=@comentario.IDcomentario">Aprovar</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>
+
+
+<h3>Comentários aprovados</h3>
+
+<table>
+    <thead>
+        <tr>
+            @*<td>Nome:</td>*@
+            <td>Texto:</td>
+            <td>Data de postagem:</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(ComentarioModel comentario in ViewData["Comentario"] as List<ComentarioModel>)
+        {
+          @*@foreach(UsuarioModel usuario in ViewData["Usuario"] as List<UsuarioModel>)*@
+          @*{*@
+                @if(@comentario.Status=="aprovado")
+                {
+                    <tr>
+                        @*<td>
+                            @usuario.Nome
+                        </td>*@
+                        <td>
+                            @comentario.Texto
+                        </td>
+                        <td>
+                            @comentario.DataPostagem.ToShortDateString()
+                        </td>
+                    </tr>
+                }
+            @*}*@
+        }
+
+    </tbody>
+
+
+</table>
+
+
+
